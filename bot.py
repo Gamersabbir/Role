@@ -23,7 +23,7 @@ async def on_ready():
     print(f"✅ Logged in as {bot.user}")
     change_color.start()
 
-@tasks.loop(seconds=5)  # ৫ সেকেন্ড পর পর কালার চেঞ্জ হবে
+@tasks.loop(seconds=1)  # ৫ সেকেন্ড পর পর কালার চেঞ্জ হবে
 async def change_color():
     guild = bot.get_guild(GUILD_ID)
     if not guild:
